@@ -1,0 +1,23 @@
+---
+---
+
+<section>
+  <h2 class="fromRight">hej</h2>
+  <p></p>
+</section>
+
+<style>
+  h2 {
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".fromRight", {
+    x: 300,
+  });
+</script>
