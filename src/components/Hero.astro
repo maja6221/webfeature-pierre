@@ -1,0 +1,47 @@
+---
+---
+
+<section>
+  <div>
+    <h1>UPERPEKT ER PERFEKT</h1>
+  </div>
+  <div class="scroll_arrow">
+    <a href="#" title="Scroll til næste sektion">
+      <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L39.5 28.5L79.5 1" stroke="white" stroke-width="2"></path>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<style>
+  section {
+    background-image: linear-gradient(rgba(29, 36, 62, 0.5), rgba(29, 36, 62, 0.5)), url(../assets/hero.webp);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+  }
+  div {
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+  h1 {
+    color: white;
+    font-family: "raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8vw;
+    text-shadow: 0px 4px 0px #d13196;
+  }
+
+  .scroll_arrow {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    padding: 1rem;
+  }
+  .scroll_arrow:hover {
+    transform: scale(1.2);
+  }
+</style>
