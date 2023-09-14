@@ -15,7 +15,7 @@ html {
 
   block-size: 100%;
 
-  color: var(--gray-7);
+  
 
   font-family: var(--font-sans);
 
@@ -64,7 +64,7 @@ h6 {
 h1,
 h2,
 h3 {
-  color: var(--gray-9);
+  color: white;
 
   line-height: var(--font-lineheight-0);
 }
