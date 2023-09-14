@@ -6,7 +6,7 @@
 
 <body>
    
-<div class="grid-container"></div>
+<div class="grid-container">
    <div class="grid-item1">
 <p>
 Stock-fotos har eksisteret i mange år. Før branchen blev digital, tilbød stock-foto virksomhederne billedmapper, der kunne bestilles fra. Men stock-foto branchen var én af de tidlige til at blive fuldt digitaliseret.hvad de skal bruges til. 
@@ -24,15 +24,20 @@ Stock-fotos er billeder, der kan købes fra et foto-website. De bruges af aviser
 Stock-fotos bliver ofte kritiseret for at være uden sjæl - det er de der billeder af en læge i hvid kittel med stetoskop om halsen på en meget hvid baggrund eller en meget glad dame fra virksomhedens salgs- eller supportafdeling. 
 </p>
 </div>
+</div>
 
 <div class="square"></div>
 
 <div class="square2"></div>
 
 <div class="square3"></div>
+
+
 </body>
 
 <style>
+
+  
 
 h3 {color:white;}
 
@@ -59,7 +64,7 @@ p {color: white;}
 }
 
 .grid-item1 {
-  padding-top: 1%;
+  padding-top: 5%;
   padding-bottom: 1%;}
 
 .grid-item2 {
@@ -72,4 +77,15 @@ padding-top: 1%;
 padding-top:1%;
 }
 
+/* desktop */
+.grid-container {
+  margin-inline: var(--size-13);
+}
+
+/* mobile */
+@media ( max-width: 800px) {
+  .grid-container {
+  margin-inline: var(--size-5);
+}
+  }
 </style>
