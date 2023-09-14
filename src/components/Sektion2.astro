@@ -1,5 +1,4 @@
 ---
-import Box from "./Box.astro";
 ---
 
 <section>
@@ -7,10 +6,7 @@ import Box from "./Box.astro";
     <div class="fakta_1"><p>Pierre Falcke sælger 2 millioner fotos om året.</p></div>
     <div class="fakta_2"><p>Det svarer til én fotolicens hvert 16. sekund.</p></div>
     <div class="fakta_3"><p>Du ser hans fotos ca. 2 gange om dagen.</p></div>
-
-    <!--  <p id="fakta_4">Men du ved formentligt ikke hvem han er.</p> -->
   </div>
-  <Box />
 </section>
 
 <style>
@@ -19,7 +15,6 @@ import Box from "./Box.astro";
     background-size: cover;
     background-position: center center;
     height: 100vh;
-    margin-bottom: 3rem;
   }
 
   p {
@@ -33,7 +28,7 @@ import Box from "./Box.astro";
   }
 
   .fakta {
-    padding-block: 5vh;
+    padding-block: 5vw;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -53,10 +48,22 @@ import Box from "./Box.astro";
   .fakta_3 {
     background: var(--11, rgba(60, 148, 148, 0.75));
   }
-  /* #fakta_4 {
-    background-color: rgba(9, 10, 152, 0.71);
-    position: static;
-    bottom: 0;
-    right: 0;
-  } */
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".fakta", {
+    xPercent: 100,
+    duration: 2,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".fakta",
+      end: "bottom 80%",
+
+      markers: true,
+    },
+  });
+</script>
