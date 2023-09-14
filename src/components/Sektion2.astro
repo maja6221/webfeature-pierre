@@ -1,4 +1,5 @@
 ---
+import Box from "./Box.astro";
 ---
 
 <section>
@@ -6,7 +7,10 @@
     <div class="fakta_1"><p>Pierre Falcke sælger 2 millioner fotos om året.</p></div>
     <div class="fakta_2"><p>Det svarer til én fotolicens hvert 16. sekund.</p></div>
     <div class="fakta_3"><p>Du ser hans fotos ca. 2 gange om dagen.</p></div>
+
+    <!--  <p id="fakta_4">Men du ved formentligt ikke hvem han er.</p> -->
   </div>
+  <Box />
 </section>
 
 <style>
@@ -15,36 +19,47 @@
     background-size: cover;
     background-position: center center;
     height: 100vh;
+    margin-bottom: 3rem;
   }
 
   p {
     font-family: "raleway", sans-serif;
     font-weight: 400;
     font-style: normal;
-    padding: 2rem;
+    padding: 10px;
     color: white;
-    font-size: 2vw;
+    font-size: 3vw;
     margin-inline: 2rem;
   }
 
   .fakta {
-    padding-block: 5rem;
+    padding-block: 5vh;
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 3rem;
-    margin-inline: 20vw;
+    gap: 2rem;
+    margin-inline: 10vw;
   }
 
   .fakta_1 {
-    background-color: #ff2181;
+    background: var(--10, rgba(255, 33, 129, 0.74));
   }
 
   .fakta_2 {
-    background-color: #3a2caa;
+    background: var(--12, #3a2caa);
+    mix-blend-mode: hard-light;
   }
 
   .fakta_3 {
-    background-color: #3c9494;
+    background: var(--11, rgba(60, 148, 148, 0.75));
+  }
+  /* #fakta_4 {
+    background-color: rgba(9, 10, 152, 0.71);
+    position: static;
+    bottom: 0;
+    right: 0;
+  } */
+
+  @media screen and (min-width: px) {
   }
 </style>
