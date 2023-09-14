@@ -7,25 +7,25 @@
 <body>
    
 <div class="grid-container">
-   <div class="grid-item1">
+   <div class="grid-item7">
 <p>
 Fotografering med gode, gammeldags filmruller. Analog fotografering stiger for tiden i popularitet, specielt blandt unge, og prisen på filmruller og vintage-kameraer skyder i vejret.
 </p>
 </div>
 
-<div class="grid-item2">
+<div class="grid-item8">
 <p>
 Mange fotografer synes at film-fotografering er mere ægte har mere “sjæl.” Analog fotografering er langsommmere, hvert enkelt billede koster penge, og man bliver nødt til at overveje motiv og lys grundigere før der skydes - tænk før du trykker. 
 </p>
 </div>
 
-<div class="grid-item3">
+<div class="grid-item9">
 <p>
 Analog fotografering kan gå galt mange steder i processen, og det giver også mulighed for at eksperimentere med “det uperfekte og uforudsigelige i processen.” 
 </p>
 </div>
 
-<div class="grid-item4">
+<div class="grid-item10">
 <p>
 Man kan f.eks. skyde på for gamle filmruller, arbejde med forskellige teknikker som “lens whacking” og filtre/ting foran objektivet, og man kan pille ved de kemiske processer under fremkaldelse af filmen.
 </p>
@@ -41,22 +41,22 @@ body {background-color: black;}
 
 p {color: white;}
 
-.grid-item1 {
+.grid-item7 {
   padding-top: 5%;
   padding-bottom: 1%;}
 
-.grid-item2 {
+.grid-item8 {
 padding-top: 1%;
 padding-bottom: 1%;
 padding-left: 10%;
 }
 
-.grid-item3 {
+.grid-item9 {
 padding-top: 1%;
 padding-bottom:1%;
 }
 
-.grid-item4 {
+.grid-item10 {
   padding-top: 1%;
   padding-bottom: 1%;
   padding-left: 10%;
@@ -81,6 +81,54 @@ padding-bottom:1%;
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.fromTo(".box", {opacity: 0}, {opacity: 0.5, duration: 1});
+      gsap.from(".grid-item7", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".grid-item7",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+       gsap.from(".grid-item8", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".grid-item8",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+       gsap.from(".grid-item9", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".grid-item9",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+       gsap.from(".grid-item10", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".grid-item10",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+
   
 </script>
