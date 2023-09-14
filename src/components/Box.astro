@@ -1,7 +1,12 @@
 ---
+import Line from "./Line.astro";
 ---
 
-<p>Men du ved formentligt ikke hvem han er.</p>
+<Line />
+<div class="box">
+  <p>Men du ved formentligt ikke hvem han er.</p>
+</div>
+<Line />
 
 <style>
   p {
@@ -11,10 +16,9 @@
     color: white;
     font-size: 3vw;
     background-color: black;
-    box-shadow: 5px 10px #ff2181;
+    /*  box-shadow: 5px 10px #ff2181; */
     padding-bottom: 2rem;
     text-align: center;
-    animation: var(--animation-fade-in-bloom);
   }
 
   @media screen and (max-width: 800px) {
@@ -24,4 +28,20 @@
   }
 </style>
 
-<script></script>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".box", {
+    opacity: 0,
+    duration: 5,
+    scrollTrigger: {
+      trigger: ".box",
+      start: "top 60%",
+      end: "bottom 20%",
+
+      /*     markers: true, */
+    },
+  });
+</script>

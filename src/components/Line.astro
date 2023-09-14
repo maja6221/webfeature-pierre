@@ -1,0 +1,34 @@
+---
+---
+
+<div class="line"></div>
+
+<style>
+  .line {
+    width: 100vw;
+
+    height: 8px;
+    margin: 0 0 10px 0;
+    position: relative;
+    display: inline-block;
+    background-color: #ff2181;
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".line", {
+    scrollTrigger: {
+      trigger: ".line",
+      scrub: true,
+      start: "top bottom",
+      end: "top top",
+    },
+    scaleX: 0,
+    transformOrigin: "left center",
+    ease: "none",
+  });
+</script>
