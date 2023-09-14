@@ -1,17 +1,28 @@
 ---
+const { variant } = Astro.props;
 ---
 
-<div class="line"></div>
+<!-- <button class={variant + " " + size}><slot /></button> -->
+<div id="line" class={variant}>
+  <slot />
+</div>
 
 <style>
-  .line {
+  #line {
     width: 100vw;
-
     height: 8px;
     margin: 0 0 10px 0;
     position: relative;
     display: inline-block;
+    /* background-color: #ff2181; */
+  }
+
+  .pink {
     background-color: #ff2181;
+  }
+
+  .blue {
+    background-color: #3a2caa;
   }
 </style>
 
@@ -20,9 +31,9 @@
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.from(".line", {
+  gsap.from("#line", {
     scrollTrigger: {
-      trigger: ".line",
+      trigger: "#line",
       scrub: true,
       start: "top bottom",
       end: "top top",
