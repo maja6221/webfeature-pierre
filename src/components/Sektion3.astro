@@ -37,11 +37,7 @@ Stock-fotos bliver ofte kritiseret for at være uden sjæl - det er de der bille
 
 <style>
 
-  @media ( min-width: 600) {
-  .grid-container {
-  margin-inline: var(--size-2);
-}
-  }
+  
 
 h3 {color:white;}
 
@@ -81,7 +77,15 @@ padding-top: 1%;
 padding-top:1%;
 }
 
+/* desktop */
 .grid-container {
   margin-inline: var(--size-13);
 }
+
+/* mobile */
+@media ( max-width: 800px) {
+  .grid-container {
+  margin-inline: var(--size-5);
+}
+  }
 </style>
