@@ -388,3 +388,46 @@
     }
   
   </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".boks1", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".boks1",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+  gsap.from("#boks2", {
+    xPercent: -100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: "#boks2",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+  gsap.from("#img", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: "#img",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+</script>
