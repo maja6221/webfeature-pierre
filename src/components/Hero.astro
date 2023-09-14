@@ -1,4 +1,5 @@
 ---
+import Line from "./Line.astro";
 ---
 
 <section>
@@ -6,7 +7,7 @@
     <h1>UPERPEKT ER PERFEKT</h1>
   </div>
   <div class="scroll_arrow">
-    <a href="#" title="Scroll til næste sektion">
+    <a href="#sektion2" title="Scroll til næste sektion">
       <svg width="81" height="30" viewBox="0 0 81 30" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 1L39.5 28.5L79.5 1" stroke="white" stroke-width="2"></path>
       </svg>
@@ -39,6 +40,7 @@
   .scroll_arrow {
     animation: var(--animation-float);
     transition: all 0.3s ease-in-out;
+
     cursor: pointer;
     padding: 1rem;
   }

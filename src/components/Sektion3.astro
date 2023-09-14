@@ -89,3 +89,47 @@ padding-top:1%;
 }
   }
 </style>
+
+ <script>
+
+    import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".square3", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".square3",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+      gsap.from(".grid-item1", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".grid-item1",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+     gsap.from(".grid-item2", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".grid-item2",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+</script>  

@@ -68,3 +68,12 @@ padding-top:1%;
   }
 
 </style>
+
+<script>
+    import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(".box", {opacity: 0}, {opacity: 0.5, duration: 1});
+  
+</script>
