@@ -1,1 +1,10 @@
 @import "reset.css";
+
+h2,
+p {
+  font-family: "raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  color: white;
+}
