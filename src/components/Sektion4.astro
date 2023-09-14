@@ -50,8 +50,8 @@
     </div>
     </div> -->
   
-  <div id="img">
-    <div class="img">
+  <div id="img1">
+    <div class="img1">
     <img class="pierre" src="src/assets/tynd-film.webp" alt="hus">
     </div>
     </div>
@@ -222,6 +222,16 @@
       padding-bottom: 20%;
     }
   
+    .img1 { 
+      display: grid;
+      padding: 15%;
+     
+    }
+  
+    #img1 {
+      padding-bottom: 20%;
+    }
+  
     /* .blitz {
       position: absolute;
       width: 10%;
@@ -385,6 +395,16 @@
     #img {
       padding-bottom: 20%;
     }
+
+    .img1 { 
+      display: grid;
+      padding: 15%;
+     
+    }
+  
+    #img1 {
+      padding-bottom: 20%;
+    }
     }
   
   </style>
@@ -424,6 +444,42 @@
     stagger: 0.5,
     scrollTrigger: {
       trigger: "#img",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+  gsap.from("#boks3", {
+    xPercent: -100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: "#boks3",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+  gsap.from(".img1", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: "#img1",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+  gsap.from("#boks4", {
+    xPercent: -100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: "#boks4",
       end: "bottom 80%",
       scrub: true,
       
