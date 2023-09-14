@@ -174,6 +174,7 @@
       justify-content: center;
       text-align: center;
       display: flex;
+      animation: var(--animation-pulse);
     }
   
     .citation {
@@ -462,7 +463,7 @@
     },
   });
 
-  gsap.from(".img1", {
+  gsap.from("#img1", {
     xPercent: 100,
     duration: 1,
     stagger: 0.5,
@@ -480,6 +481,55 @@
     stagger: 0.5,
     scrollTrigger: {
       trigger: "#boks4",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+  gsap.from("#boks5", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: "#boks5",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+  gsap.from("#boks6", {
+    xPercent: -100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: "#boks6",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+  gsap.from("#boks7", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: "#boks7",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+
+  gsap.from("#boks8", {
+    xPercent: -100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: "#boks8",
       end: "bottom 80%",
       scrub: true,
       
