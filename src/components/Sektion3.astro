@@ -132,4 +132,16 @@ padding-bottom:10%;
     },
   });
 
+       gsap.from(".grid-item3", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".grid-item3",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
 </script>  

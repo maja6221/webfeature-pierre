@@ -7,19 +7,19 @@
 <body>
    
 <div class="grid-container">
-   <div class="grid-item1">
+   <div class="grid-item4">
 <p>
 Pierre tjente godt det følgende årti. Men stille og roligt begyndte billederne også at give ham kvalme. Han kunne ikke holde sit eget arbejde ud, og måtte finde et modsvar til alle de blankpolerede fotos. Noget han kunne lave med stolthed. Pierre bestluttede sig for at droppe stock-fotos, og vende tilbage til rødderne.
 </p>
 </div>
 
-<div class="grid-item2">
+<div class="grid-item5">
 <p>
 Han søgte inspiration i analog fotografering, i Lomo-bevægelsen, Glitch art og polaroid fotografering, og begyndte stille og roligt at skabe sig en ny stil - en stil med fokus på det uperfekte, og hvor der er et uforudsigeligt element i det at tage billeder. 
 </p>
 </div>
 
-<div class="grid-item3">
+<div class="grid-item6">
 <p>
 Pierre tog det endda så vidt at han ikke kun droppede at tage stock-fotos. Han fjernede også alle stock-fotos fra de tjenester, han solgte sine fotos hos. Han gik fra at være en god forretningsdrivende til at blive en vaskeægte boheme-type på rekordtid.
 </p>
@@ -40,19 +40,19 @@ p {color: white;}
   margin-inline: var(--size-13);
 }
 
-.grid-item1 {
+.grid-item4 {
   padding-top: 5%;
   padding-bottom: 1%;}
 
-.grid-item2 {
+.grid-item5 {
 padding-top: 1%;
 padding-bottom: 1%;
 padding-left: 10%;
 }
 
-.grid-item3 {
+.grid-item6 {
 padding-top: 1%;
-padding-bottom:30%;
+padding-bottom:3%;
 }
 
 /* mobile */
@@ -68,6 +68,43 @@ padding-bottom:30%;
     import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
+
+
+      gsap.from(".grid-item4", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".grid-item4",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+     gsap.from(".grid-item5", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".grid-item5",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
+
+       gsap.from(".grid-item6", {
+    xPercent: 100,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".grid-item6",
+      end: "bottom 80%",
+      scrub: true,
+      
+    },
+  });
 
 
 </script>

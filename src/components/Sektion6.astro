@@ -1,0 +1,29 @@
+---
+---
+
+<div class="film">
+  <img src="/assets/img/film.webp" alt="film" />
+</div>
+
+<style>
+  img {
+    width: 100vw;
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".film", {
+    xPercent: -100,
+    duration: 10,
+    scrollTrigger: {
+      trigger: ".film",
+      start: "top 60%",
+      end: "bottom 40%",
+      scrub: true,
+    },
+  });
+</script>
